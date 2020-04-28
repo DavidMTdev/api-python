@@ -1,0 +1,21 @@
+{% extends "layout/base.html" %}
+
+
+{% block title %}
+<title>liste des équipes</title>
+{% endblock title %}
+
+{% block style %}
+{% endblock style %}
+
+{% block content %}
+
+{% for team in teams %}
+<div>
+    <img width="40px" height="40px" src="{{ team.logo  }}" alt="">
+    {{ team.fullName  }}
+    <a href="{{ url_for('team', id=team.teamId) }}">voir équipe</a>
+</div>
+{% endfor %}
+
+{% endblock content %}

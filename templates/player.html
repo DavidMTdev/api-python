@@ -1,0 +1,26 @@
+{% extends "layout/base.html" %}
+
+
+{% block title %}
+<title>liste des joueurs</title>
+{% endblock title %}
+
+{% block style %}
+{% endblock style %}
+
+{% block content %}
+
+<a href="{{ url_for('index') }}">revenir aux equipes</a>
+{% for player in players %}
+<div>
+    <h3>{{player.firstName | capitalize}} {{player.lastName | capitalize}} </h3>
+    <p>Pays : {{player.country}}</p>
+    <p>année pro : {{player.yearsPro}}</p>
+    <p>date de naissance : {{player.dateOfBirth}}</p>
+    <p>taille : {{player.heightInMeters}}m</p>
+    <p>poid : {{player.weightInKilograms}}Kg</p>
+</div>
+
+{% endfor %}
+
+{% endblock content %}
