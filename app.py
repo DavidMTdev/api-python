@@ -24,12 +24,21 @@ def index():
 @app.route('/team/<int:id>')
 def team(id):
     url = "https://api-nba-v1.p.rapidapi.com/players/teamId/" + str(id)
+    teams = "https://api-nba-v1.p.rapidapi.com/teams/league/standard"
+
 
     response = requests.request("GET", url, headers=headers)
+    responses = requests.request("GET", teams, headers=headers)
 
     players = response.json()['api']['players']
+    teams = responses.json()['api']['teams']
+    team = ""
 
-    return render_template('player.html', players=players)
+    for value in teams: 
+        if value['teamId'] == str(id):
+            team = value
+
+    return render_template('player.html', players=players, team=team)
 
 
 if __name__ == '__main__':

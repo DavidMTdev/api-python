@@ -12,6 +12,9 @@
 {% block content %}
 
 <a href="{{ url_for('index') }}">revenir aux equipes</a>
+<p>{{team.fullName}}</p>
+<p><img src="{{team.logo}}" alt=""> </p>
+
 <div class="container">
     <table class="table table-bordered">
         <thead class="thead-dark">
@@ -22,11 +25,13 @@
                 <th scope="col">Date de naissance</th>
                 <th scope="col">Taille</th>
                 <th scope="col">Poids</th>
+
             </tr>
         </thead>
         <tbody>
 
             {% for player in players %}
+            {% if player.country != '' %}
             <tr>
                 <th scope="row">{{player.firstName | capitalize}} {{player.lastName | capitalize}}</th>
                 <td>{{player.country}}</td>
@@ -35,7 +40,7 @@
                 <td>{{player.heightInMeters}}m</td>
                 <td>{{player.weightInKilograms}}Kg</td>
             </tr>
-
+            {% endif %}
             {% endfor %}
         </tbody>
     </table>
