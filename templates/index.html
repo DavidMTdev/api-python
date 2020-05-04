@@ -13,12 +13,14 @@
 <h1 class="title">Les équipes de NBA</h1>
 <div class="container">
     {% for team in teams %}
+    {% if team.logo %}
     <div class="team-container">
         <a href="{{ url_for('team', id=team.teamId) }}" class="team-link">
             <img width="40px" height="40px" src="{{ team.logo  }}" alt="">
             <h3>{{ team.fullName  }}</h3>
         </a>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 {% endblock content %}
