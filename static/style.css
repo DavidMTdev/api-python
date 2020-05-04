@@ -2,11 +2,13 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    color: black;
     font-family: 'Teko', sans-serif;
 }
 
 .title{
     text-align: center;
+    font-size: 4em;
 }
 
 .team-container{
@@ -21,14 +23,28 @@
 }
 
 .team-link{
-    margin: 20px;
+    
+    
+}
+
+.team-infos{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 40px 20px;
 }
 
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.team-link:hover .team-name{
+    text-decoration: underline;
+}
+
+.team-container:hover{
+/* width: 85%; */
+    height: 85%;
 }
