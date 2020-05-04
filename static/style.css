@@ -22,10 +22,7 @@
     box-shadow: 3px 3px 5px 0px #656565;;
 }
 
-.team-link{
-    
-    
-}
+
 
 .team-infos{
     display: flex;
@@ -33,6 +30,14 @@
     justify-content: center;
     align-items: center;
     margin: 40px 20px;
+}
+
+.team-infos img{
+    padding-bottom: 10px;
+}
+
+.team-infos .team-name{
+    font-size: 1.5em;
 }
 
 .container{
@@ -45,6 +50,5 @@
 }
 
 .team-container:hover{
-/* width: 85%; */
     height: 85%;
 }
