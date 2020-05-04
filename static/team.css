@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'Teko', sans-serif;
+}
+
+a{
+    color: black;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+a:hover{
+    color: black;
+}
+
+a i{
+    padding-right: 2px;
+}
+.team-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+
+}
+
+.team-title h1{
+    font-size: 4em;
+    margin-bottom: 0;
+}
+
+.team-title img{
+    margin-right: 20px;
+}
+
+table{
+    font-size: 1.5em;
+}
