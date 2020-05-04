@@ -14,6 +14,7 @@
 <div class="container">
     {% for team in teams %}
     {% if team.logo %}
+    {% if team.leagues.standard.divName != "" %}
     <div class="team-container">
         <a href="{{ url_for('team', id=team.teamId) }}" class="team-link">
             <div class="team-infos">
@@ -22,7 +23,7 @@
             </div>
         </a>
     </div>
-    {% endif %}
+    {% endif %}{% endif %}
     {% endfor %}
 </div>
 {% endblock content %}
