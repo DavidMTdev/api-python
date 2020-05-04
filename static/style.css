@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+}
+
+.title{
+    text-align: center;
+}
+
+.team-container{
+    margin: 20px;
+    /* width: 10%; */
+    display: block;
+    border: 0.1px solid rgb(209, 209, 209);
+    -moz-box-shadow: 3px 3px 5px 0px #656565;
+    -webkit-box-shadow: 3px 3px 5px 0px #656565;
+    -o-box-shadow: 3px 3px 5px 0px #656565;
+    box-shadow: 3px 3px 5px 0px #656565;;
+}
+
+.team-link{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
