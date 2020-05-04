@@ -6,21 +6,38 @@
 {% endblock title %}
 
 {% block style %}
+
 {% endblock style %}
 
 {% block content %}
 
 <a href="{{ url_for('index') }}">revenir aux equipes</a>
-{% for player in players %}
-<div>
-    <h3>{{player.firstName | capitalize}} {{player.lastName | capitalize}} </h3>
-    <p>Pays : {{player.country}}</p>
-    <p>année pro : {{player.yearsPro}}</p>
-    <p>date de naissance : {{player.dateOfBirth}}</p>
-    <p>taille : {{player.heightInMeters}}m</p>
-    <p>poid : {{player.weightInKilograms}}Kg</p>
+<div class="container">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Pays</th>
+                <th scope="col">Année pro</th>
+                <th scope="col">Date de naissance</th>
+                <th scope="col">Taille</th>
+                <th scope="col">Poids</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for player in players %}
+            <tr>
+                <th scope="row">{{player.firstName | capitalize}} {{player.lastName | capitalize}}</th>
+                <td>{{player.country}}</td>
+                <td>{{player.yearsPro}}</td>
+                <td>{{player.dateOfBirth}}</td>
+                <td>{{player.heightInMeters}}m</td>
+                <td>{{player.weightInKilograms}}Kg</td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
-
-{% endfor %}
-
 {% endblock content %}
